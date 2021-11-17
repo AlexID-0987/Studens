@@ -13,7 +13,27 @@
     background-color: olivedrab;
     text-align: center;
     border-radius: 2em;
+    margin-right: 2em;
+    margin-bottom: 2em;
+    margin-left: 2em;
+    
 }
 li{
     list-style-type: none;
+}
+.ob{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.info{
+ display: flex;
+ height: 4em;
+ background-color:burlywood;
+ border-radius: 2em;
+ margin-bottom: 2em;
+}
+.el{
+    margin-left: 2em;
+    margin-top: 1.3em;
 }

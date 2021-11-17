@@ -10,9 +10,11 @@ import { Pers } from './person_intef';
 export class PersonComponent implements OnInit {
 
   constructor() {}
-  persone=Persons
-
+  persone=Persons;
+  selectedPersone?:Pers
   ngOnInit(): void {
   }
-
+ Personeupdate(p:Pers):void{
+ this.selectedPersone=p;
+ }
 }

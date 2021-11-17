@@ -1,20 +1,28 @@
-<!-- <div>
-    <label for="in">Lastname</label>
-    <input id="in" [(ngModel)]="persone.lastname" placeholder="lastname">
-</div> -->
-<!-- <div class="card" *ngfor="let p of persone">
-<p>{{p.id}}</p>
-<div class="img">
-    <img src={{p.foto}}>
+<div class="info" *ngIf="selectedPersone">
+    <div class="el">
+        <label for="text">foto</label>
+        <input id="text" [(ngModel)]="selectedPersone.foto" placeholder="foto">
+    </div>
+<div class="el">
+    <label for="text">Lastname</label>
+    <input id="text" [(ngModel)]="selectedPersone.lastname" placeholder="lastname">
 </div>
-<p>lastname: {{p.lastname | uppercase}}</p>
-<p>name: {{p.name | uppercase}}</p>
-<p>{{p.science}}</p>
-<p>mark: {{p.mark}}</p>
-</div> -->
-<ul>
-    <li *ngFor="let p of persone">
-        <div class="card">
+<div class="el">
+    <label for="text">Name</label>
+    <input id="text" [(ngModel)]="selectedPersone.name" placeholder="name">
+</div>
+<div class="el">
+    <label for="text">Name</label>
+    <input id="text" [(ngModel)]="selectedPersone.science" placeholder="science">
+</div>
+<div class="el">
+    <label for="text">Name</label>
+    <input id="text" [(ngModel)]="selectedPersone.mark" placeholder="mark">
+</div>
+</div>
+        <div class="ob">
+        <div class="card" *ngFor="let p of persone" (click)
+        ="Personeupdate(p)">
             <p>{{p.id}}</p>
             <div class="img">
                 <img src={{p.foto}}>
@@ -24,5 +32,6 @@
             <p>{{p.science}}</p>
             <p>mark: {{p.mark}}</p> 
         </div>
-    </li>
-</ul>
+        </div>
+    
+    
