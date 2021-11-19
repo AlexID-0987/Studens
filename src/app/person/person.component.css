@@ -26,14 +26,6 @@ li{
     flex-wrap: wrap;
     
 }
-.info{
- display: flex;
- height: 4em;
- background-color:burlywood;
- border-radius: 2em;
- margin-bottom: 2em;
-}
-.el{
-    margin-left: 2em;
-    margin-top: 1.3em;
+.btn{
+    text-align: center;
 }

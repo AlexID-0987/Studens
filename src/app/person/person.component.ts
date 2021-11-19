@@ -8,6 +8,7 @@ import { Pers } from './person_intef';
   styleUrls: ['./person.component.css']
 })
 export class PersonComponent implements OnInit {
+  show:boolean=true;
 
   constructor() {}
   persone=Persons;
@@ -16,5 +17,8 @@ export class PersonComponent implements OnInit {
   }
  Personeupdate(p:Pers):void{
  this.selectedPersone=p;
+ }
+ chacgeVis(){
+   this.show=!this.show;
  }
 }

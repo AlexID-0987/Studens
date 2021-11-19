@@ -1,25 +1,7 @@
-<div class="info" *ngIf="selectedPersone">
-    <div class="el">
-        <label for="text">foto</label>
-        <input id="text" [(ngModel)]="selectedPersone.foto" placeholder="foto">
-    </div>
-<div class="el">
-    <label for="text">Lastname</label>
-    <input id="text" [(ngModel)]="selectedPersone.lastname" placeholder="lastname">
-</div>
-<div class="el">
-    <label for="text">Name</label>
-    <input id="text" [(ngModel)]="selectedPersone.name" placeholder="name">
-</div>
-<div class="el">
-    <label for="text">Name</label>
-    <input id="text" [(ngModel)]="selectedPersone.science" placeholder="science">
-</div>
-<div class="el">
-    <label for="text">Name</label>
-    <input id="text" [(ngModel)]="selectedPersone.mark" placeholder="mark">
-</div>
-</div>
+<app-person-deteils [Pe]="selectedPersone"></app-person-deteils>
+<button type="button" class="btn btn-primary"
+(click)="chacgeVis()">Primary</button>
+      <div *ngIf="show">
         <div class="ob">
         <div class="card" *ngFor="let p of persone" (click)
         ="Personeupdate(p)">
@@ -31,7 +13,9 @@
             <p>name: {{p.name | uppercase}}</p>
             <p>{{p.science}}</p>
             <p>mark: {{p.mark}}</p> 
+            
         </div>
         </div>
+      </div>
     
     
