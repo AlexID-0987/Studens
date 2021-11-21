@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Persons } from '../Persons';
-import { Pers } from './person_intef';
+import {Pers} from "./person_intef";
+import {CrudpersonService} from "../crudperson.service";
+
 
 @Component({
   selector: 'app-person',
@@ -10,15 +11,20 @@ import { Pers } from './person_intef';
 export class PersonComponent implements OnInit {
   show:boolean=true;
 
-  constructor() {}
-  persone=Persons;
-  selectedPersone?:Pers
+  constructor(private personeService: CrudpersonService) {}
+  persone:Pers[]=[];
+  selectedPersone?:Pers;
   ngOnInit(): void {
+    this.getPersone();
   }
  Personeupdate(p:Pers):void{
  this.selectedPersone=p;
  }
  chacgeVis(){
    this.show=!this.show;
+ }
+ getPersone(){
+    //this.persone=this.personeService.getPersone();
+   this.personeService.getPersone().subscribe(persone=>this.persone=persone)
  }
 }
