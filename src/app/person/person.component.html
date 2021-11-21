@@ -1,6 +1,8 @@
 <app-person-deteils [Pe]="selectedPersone"></app-person-deteils>
+<div class="bt">
 <button type="button" class="btn btn-primary"
-(click)="chacgeVis()">Primary</button>
+(click)="chacgeVis()">Hide</button>
+</div>
       <div *ngIf="show">
         <div class="ob">
         <div class="card" *ngFor="let p of persone" (click)
@@ -12,10 +14,12 @@
             <p>lastname: {{p.lastname | uppercase}}</p>
             <p>name: {{p.name | uppercase}}</p>
             <p>{{p.science}}</p>
-            <p>mark: {{p.mark}}</p> 
-            
+            <p>mark: {{p.mark}}</p>
+          <div class="ch">
+            <label>Delete:</label>
+            <input class="form-check-input mt-1" type="checkbox" (click)="remove(p)" >
+          </div>
         </div>
         </div>
       </div>
-    
-    
+

@@ -16,7 +16,7 @@
     margin-right: 2em;
     margin-bottom: 2em;
     margin-left: 2em;
-    
+
 }
 li{
     list-style-type: none;
@@ -24,8 +24,19 @@ li{
 .ob{
     display: flex;
     flex-wrap: wrap;
-    
+
 }
 .btn{
     text-align: center;
 }
+.ch{
+  text-align: center;
+
+}
+ .bt{
+   text-align: center;
+   margin-bottom: 2em;
+}
+ .btn {
+   width: 20em;
+ }

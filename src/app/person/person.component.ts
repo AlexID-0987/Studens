@@ -24,7 +24,12 @@ export class PersonComponent implements OnInit {
    this.show=!this.show;
  }
  getPersone(){
-    //this.persone=this.personeService.getPersone();
+
    this.personeService.getPersone().subscribe(persone=>this.persone=persone)
  }
+ remove(pr:Pers){
+    this.personeService.remowe(pr).subscribe(pr=>{this.getPersone();})
+ }
+
+
 }
